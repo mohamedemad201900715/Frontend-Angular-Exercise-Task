@@ -1,0 +1,27 @@
+.custom-dropdown
+{
+  width: 44px;
+    height: 22px;
+    padding: 1px 8px 1px 8px;
+    border-radius: 6px;
+    border: 1px solid rgba(231, 231, 231, 1)
+}
+.selected-item, .dropdown-list{
+ width: 100%;
+ font-family: Cairo;
+ font-size: 12px;
+ font-weight: 400;
+ line-height: 22.49px;
+ text-align: center;
+//  height: 100%;
+  padding: 1px 8px 1px 8px;
+  // border-radius: 6px;
+}
+.selected-item img {
+  width: 8px;
+  height: 8px;
+}
+
+.dropdown-list li{
+  cursor: pointer;
+}

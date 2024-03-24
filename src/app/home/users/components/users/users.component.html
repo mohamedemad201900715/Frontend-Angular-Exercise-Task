@@ -1,0 +1,1588 @@
+<div class="container-fluid gap-3 h-100 d-flex">
+  <div class="d-flex flex-column w-100 m-3 ">
+    <section
+      class="add-user w-100 d-flex align-items-center  justify-content-between ">
+      <p class="m-0">Users</p>
+      <button class="btn d-flex justify-content-center align-items-center"
+        data-bs-toggle="modal"
+        data-bs-target="#AddUserModal">Add User</button>
+      <!-- Start Modal Add User -->
+      <div class="modal fade" id="AddUserModal" tabindex="-1" role="dialog"
+        aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-lg" role="document">
+          <form class="modal-content">
+            <!-- Modal Body -->
+            <div
+              class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+              <!-- <div class="box d-flex justify-content-center flex-column">  -->
+              <div class="section-1 d-flex justify-content-between w-100">
+                <div class="title">Add User</div>
+                <button type="button" class="btn-close" data-bs-dismiss="modal"
+                  aria-label="Close"></button>
+              </div>
+              <div
+                class="section-2 p-2  m-2 mt-3  Add-details   d-flex gap-3 align-items-center  ">
+                <div class="image ">
+                  <img src="../../../../../assets/no profile.svg" alt>
+                </div>
+                <div class="d-flex flex-column justify-content-around    gap-2 ">
+                  <label for="image" class="custom-file-upload">
+                    <img src="../../../../../assets/gallery-import.svg" alt>
+                    <span>Upload Photo</span>
+                    <input type="file" name="image" id="image" accept="image/*">
+                  </label>
+                  <p>At least 256*256 px PNG or JPG file.</p>
+                </div>
+              </div>
+              <div class="section-3 p-4 ">
+                <div class="row d-flex  justify-content-between  ">
+                  <div class="col-md-4  d-flex flex-column gap-1">
+                    <label for="fullName" class="fw-bold mb-2 ">Full Name</label>
+                    <input type="text" id="fullName" class="w-100">
+                  </div>
+                  <div class="col-md-4  d-flex flex-column gap-1">
+                    <label for="userName" class="fw-bold mb-2 ">User Name</label>
+                    <input type="text" id="userName" class="w-100">
+                  </div>
+                </div>
+                <div class="row d-flex justify-content-between   ">
+                  <div class="col-md-4  d-flex flex-column gap-1">
+                    <label for="email" class="fw-bold mb-2 ">Email Address</label>
+                    <input type="email" id="email" class="w-100">
+                  </div>
+                  <div class="col-md-4  d-flex flex-column gap-1">
+                    <label for="password" class="fw-bold mb-2 ">Password</label>
+                    <div class="password-contanier">
+                    <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+                    </div>
+                  </div>
+                </div>
+              </div>
+              <!-- </div> -->
+            </div>
+            <div class="modal-footer d-flex w-100 justify-content-center ">
+              <button type="button"
+                class="btn btn-secondary d-flex justify-content-center align-items-center "
+                data-dismiss="modal">Add User</button>
+            </div>
+
+          </form>
+        </div>
+      </div>
+      <!-- End Modal -->
+    </section>
+    <section class="users w-100 p-3 mt-3  ">
+      <div class="users-titles">
+        <p class="m-0">All Users</p>
+        <p class="m-0">More than 100 User</p>
+        </div>
+        <div class="users-table ">
+          <div
+            class="row table-row d-flex justify-content-between align-items-center ">
+            <div class="col-md-2">Photo</div>
+            <div class="col-md-2">Full Name</div>
+            <div class="col-md-2">User Name</div>
+            <div class="col-md-2">Email</div>
+            <div class="col-md-2">Actions</div>
+          </div>
+          <!-- ngfor -->
+          <div
+            class="row table-row d-flex justify-content-between align-items-center   mt-2">
+            <div class="col-md-2 photo">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3148/4fa8/75a6766693a8c9b9d49b78deb2d62147?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OJccAa-8icThl66qHAhncfVnDXE2afFtU8Y-UQoy0JZcF-KoKLi2BC~~HGNypkdP8WUkizRowLxUu3lFCd-cHOqCkzFVFgZIFkM8Nse3k5AnPND7YmQS7Y55NUDE~nLc6N5vHJ-Bghf7m49keGDGh1j5874oHcUclBjp9All3HK98X0YrbygW2ATa7DSDBXPpjT0sOKbUaEW8IqCQPk3JJYMzxxfgWDbVQj5Vr0ipoj-FQhdvNGsfUmcyI74Y5LT~6dPnBL4lELMfJA2AlJ~CzHXU83E6y8ywpv2yh07okMnfdati-rOpyhuSXCqGeub5F79k-xVlYfblqs-Cu8tTw__"
+                alt>
+            </div>
+            <div class="col-md-2">Islam Ali Saied</div>
+            <div class="col-md-2">Islam_ali15</div>
+            <div class="col-md-2">Islam25@test.com</div>
+            <div class="col-md-2 d-flex icons">
+
+              <a data-bs-toggle="modal"
+                data-bs-target="#Details"><img
+                  src="../../../../../assets/eye.svg" alt></a>
+              <!-- Start Modal Show Details-->
+              <div class="modal fade" id="Details" tabindex="-1" role="dialog"
+                aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <!-- Modal Body -->
+                    <div
+                      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+                      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+                      <div class="section-1 d-flex justify-content-between ">
+                        <div class="title">User Details</div>
+                        <button type="button" class="btn-close"
+                          data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="section-2 mb-2  d-flex ">
+                        <div class="image text-center ">
+                          <img src="../../../../../assets/profile-details.svg"
+                            alt>
+                        </div>
+                        <div class="d-flex align-items-start  gap-2 ">
+                          <img src="../../../../../assets/edit UserDetails.svg"
+                            alt>
+                          <img src="../../../../../assets/delete.svg" alt>
+                        </div>
+                      </div>
+                      <div class="section-3">
+                        <div class="row mb-4">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="fullName" class="fw-bold mb-2 ">Full
+                              Name</label>
+                            <input type="text" id="fullName">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="userName" class="fw-bold mb-2 ">User
+                              Name</label>
+                            <input type="text" id="userName">
+                          </div>
+                        </div>
+                        <div class="row mb-3 ">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="email" class="fw-bold mb-2 ">Email
+                              Address</label>
+                            <input type="email" id="email">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="password" class="fw-bold mb-2 ">Password</label>
+                            <div class="password-contanier">
+                            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- </div> -->
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- End Modal -->
+              <a data-bs-toggle="modal"
+              data-bs-target="#EditUserModal"><img src="../../../../../assets/Edit.svg" alt></a>
+<!-- Start Modal Edit User -->
+<div class="modal fade" id="EditUserModal" tabindex="-1" role="dialog"
+aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+  <form class="modal-content">
+    <!-- Modal Body -->
+    <div
+      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+      <div class="section-1 d-flex justify-content-between w-100">
+        <div class="title">Add User</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div
+        class="section-2 p-2  m-2 mt-3  Add-details   d-flex gap-3 align-items-center  ">
+        <div class="image profile-image">
+          <img src="../../../../../assets/profile-details.svg" alt>
+          <a class="delete-photo">
+            <img  src="../../../../../fluent_delete-20-regular.svg" alt="">
+        </a>
+        </div>
+        <div class="d-flex flex-column justify-content-around    gap-2 ">
+          <label for="image" class="custom-file-upload">
+            <img src="../../../../../assets/gallery-import.svg" alt>
+            <span>Upload Photo</span>
+            <input type="file" name="image" id="image" accept="image/*">
+          </label>
+          <p>At least 256*256 px PNG or JPG file.</p>
+        </div>
+      </div>
+      <div class="section-3 p-4 ">
+        <div class="row d-flex  justify-content-between  ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="fullName" class="fw-bold mb-2 ">Full Name</label>
+            <input type="text" id="fullName" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="userName" class="fw-bold mb-2 ">User Name</label>
+            <input type="text" id="userName" class="w-100">
+          </div>
+        </div>
+        <div class="row d-flex justify-content-between   ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="email" class="fw-bold mb-2 ">Email Address</label>
+            <input type="email" id="email" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="password" class="fw-bold mb-2 ">Password</label>
+            <div class="password-contanier">
+            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <div class="modal-footer d-flex w-100 justify-content-center ">
+      <button type="button"
+        class="btn btn-secondary d-flex justify-content-center align-items-center "
+        data-dismiss="modal">Save Changes</button>
+    </div>
+
+  </form>
+</div>
+</div>
+<!-- End Modal -->
+
+              <img src="../../../../../assets/delete.svg" alt>
+            </div>
+          </div>
+          <!-- ngfor -->
+          <div
+            class="row table-row d-flex justify-content-between align-items-center   mt-2">
+            <div class="col-md-2 photo">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3148/4fa8/75a6766693a8c9b9d49b78deb2d62147?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OJccAa-8icThl66qHAhncfVnDXE2afFtU8Y-UQoy0JZcF-KoKLi2BC~~HGNypkdP8WUkizRowLxUu3lFCd-cHOqCkzFVFgZIFkM8Nse3k5AnPND7YmQS7Y55NUDE~nLc6N5vHJ-Bghf7m49keGDGh1j5874oHcUclBjp9All3HK98X0YrbygW2ATa7DSDBXPpjT0sOKbUaEW8IqCQPk3JJYMzxxfgWDbVQj5Vr0ipoj-FQhdvNGsfUmcyI74Y5LT~6dPnBL4lELMfJA2AlJ~CzHXU83E6y8ywpv2yh07okMnfdati-rOpyhuSXCqGeub5F79k-xVlYfblqs-Cu8tTw__"
+                alt>
+            </div>
+            <div class="col-md-2">Islam Ali Saied</div>
+            <div class="col-md-2">Islam_ali15</div>
+            <div class="col-md-2">Islam25@test.com</div>
+            <div class="col-md-2 d-flex icons">
+
+              <a data-bs-toggle="modal"
+                data-bs-target="#Details"><img
+                  src="../../../../../assets/eye.svg" alt></a>
+              <!-- Start Modal Show Details-->
+              <div class="modal fade" id="Details" tabindex="-1" role="dialog"
+                aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <!-- Modal Body -->
+                    <div
+                      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+                      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+                      <div class="section-1 d-flex justify-content-between ">
+                        <div class="title">User Details</div>
+                        <button type="button" class="btn-close"
+                          data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="section-2 mb-2  d-flex ">
+                        <div class="image text-center ">
+                          <img src="../../../../../assets/profile-details.svg"
+                            alt>
+                        </div>
+                        <div class="d-flex align-items-start  gap-2 ">
+                          <img src="../../../../../assets/edit UserDetails.svg"
+                            alt>
+                          <img src="../../../../../assets/delete.svg" alt>
+                        </div>
+                      </div>
+                      <div class="section-3">
+                        <div class="row mb-4">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="fullName" class="fw-bold mb-2 ">Full
+                              Name</label>
+                            <input type="text" id="fullName">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="userName" class="fw-bold mb-2 ">User
+                              Name</label>
+                            <input type="text" id="userName">
+                          </div>
+                        </div>
+                        <div class="row mb-3 ">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="email" class="fw-bold mb-2 ">Email
+                              Address</label>
+                            <input type="email" id="email">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="password" class="fw-bold mb-2 ">Password</label>
+                            <div class="password-contanier">
+                            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- </div> -->
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- End Modal -->
+              <a data-bs-toggle="modal"
+              data-bs-target="#EditUserModal"><img src="../../../../../assets/Edit.svg" alt></a>
+<!-- Start Modal Edit User -->
+<div class="modal fade" id="EditUserModal" tabindex="-1" role="dialog"
+aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+  <form class="modal-content">
+    <!-- Modal Body -->
+    <div
+      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+      <div class="section-1 d-flex justify-content-between w-100">
+        <div class="title">Add User</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div
+        class="section-2 p-2  m-2 mt-3  Add-details   d-flex gap-3 align-items-center  ">
+        <div class="image profile-image">
+          <img src="../../../../../assets/profile-details.svg" alt>
+          <a class="delete-photo">
+            <img  src="../../../../../fluent_delete-20-regular.svg" alt="">
+        </a>
+        </div>
+        <div class="d-flex flex-column justify-content-around    gap-2 ">
+          <label for="image" class="custom-file-upload">
+            <img src="../../../../../assets/gallery-import.svg" alt>
+            <span>Upload Photo</span>
+            <input type="file" name="image" id="image" accept="image/*">
+          </label>
+          <p>At least 256*256 px PNG or JPG file.</p>
+        </div>
+      </div>
+      <div class="section-3 p-4 ">
+        <div class="row d-flex  justify-content-between  ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="fullName" class="fw-bold mb-2 ">Full Name</label>
+            <input type="text" id="fullName" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="userName" class="fw-bold mb-2 ">User Name</label>
+            <input type="text" id="userName" class="w-100">
+          </div>
+        </div>
+        <div class="row d-flex justify-content-between   ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="email" class="fw-bold mb-2 ">Email Address</label>
+            <input type="email" id="email" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="password" class="fw-bold mb-2 ">Password</label>
+            <div class="password-contanier">
+            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <div class="modal-footer d-flex w-100 justify-content-center ">
+      <button type="button"
+        class="btn btn-secondary d-flex justify-content-center align-items-center "
+        data-dismiss="modal">Save Changes</button>
+    </div>
+
+  </form>
+</div>
+</div>
+<!-- End Modal -->
+
+              <img src="../../../../../assets/delete.svg" alt>
+            </div>
+          </div>
+          <!-- ngfor -->
+          <div
+            class="row table-row d-flex justify-content-between align-items-center   mt-2">
+            <div class="col-md-2 photo">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3148/4fa8/75a6766693a8c9b9d49b78deb2d62147?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OJccAa-8icThl66qHAhncfVnDXE2afFtU8Y-UQoy0JZcF-KoKLi2BC~~HGNypkdP8WUkizRowLxUu3lFCd-cHOqCkzFVFgZIFkM8Nse3k5AnPND7YmQS7Y55NUDE~nLc6N5vHJ-Bghf7m49keGDGh1j5874oHcUclBjp9All3HK98X0YrbygW2ATa7DSDBXPpjT0sOKbUaEW8IqCQPk3JJYMzxxfgWDbVQj5Vr0ipoj-FQhdvNGsfUmcyI74Y5LT~6dPnBL4lELMfJA2AlJ~CzHXU83E6y8ywpv2yh07okMnfdati-rOpyhuSXCqGeub5F79k-xVlYfblqs-Cu8tTw__"
+                alt>
+            </div>
+            <div class="col-md-2">Islam Ali Saied</div>
+            <div class="col-md-2">Islam_ali15</div>
+            <div class="col-md-2">Islam25@test.com</div>
+            <div class="col-md-2 d-flex icons">
+
+              <a data-bs-toggle="modal"
+                data-bs-target="#Details"><img
+                  src="../../../../../assets/eye.svg" alt></a>
+              <!-- Start Modal Show Details-->
+              <div class="modal fade" id="Details" tabindex="-1" role="dialog"
+                aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <!-- Modal Body -->
+                    <div
+                      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+                      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+                      <div class="section-1 d-flex justify-content-between ">
+                        <div class="title">User Details</div>
+                        <button type="button" class="btn-close"
+                          data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="section-2 mb-2  d-flex ">
+                        <div class="image text-center ">
+                          <img src="../../../../../assets/profile-details.svg"
+                            alt>
+                        </div>
+                        <div class="d-flex align-items-start  gap-2 ">
+                          <img src="../../../../../assets/edit UserDetails.svg"
+                            alt>
+                          <img src="../../../../../assets/delete.svg" alt>
+                        </div>
+                      </div>
+                      <div class="section-3">
+                        <div class="row mb-4">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="fullName" class="fw-bold mb-2 ">Full
+                              Name</label>
+                            <input type="text" id="fullName">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="userName" class="fw-bold mb-2 ">User
+                              Name</label>
+                            <input type="text" id="userName">
+                          </div>
+                        </div>
+                        <div class="row mb-3 ">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="email" class="fw-bold mb-2 ">Email
+                              Address</label>
+                            <input type="email" id="email">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="password" class="fw-bold mb-2 ">Password</label>
+                            <div class="password-contanier">
+                            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- </div> -->
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- End Modal -->
+              <a data-bs-toggle="modal"
+              data-bs-target="#EditUserModal"><img src="../../../../../assets/Edit.svg" alt></a>
+<!-- Start Modal Edit User -->
+<div class="modal fade" id="EditUserModal" tabindex="-1" role="dialog"
+aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+  <form class="modal-content">
+    <!-- Modal Body -->
+    <div
+      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+      <div class="section-1 d-flex justify-content-between w-100">
+        <div class="title">Add User</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div
+        class="section-2 p-2  m-2 mt-3  Add-details   d-flex gap-3 align-items-center  ">
+        <div class="image profile-image">
+          <img src="../../../../../assets/profile-details.svg" alt>
+          <a class="delete-photo">
+            <img  src="../../../../../fluent_delete-20-regular.svg" alt="">
+        </a>
+        </div>
+        <div class="d-flex flex-column justify-content-around    gap-2 ">
+          <label for="image" class="custom-file-upload">
+            <img src="../../../../../assets/gallery-import.svg" alt>
+            <span>Upload Photo</span>
+            <input type="file" name="image" id="image" accept="image/*">
+          </label>
+          <p>At least 256*256 px PNG or JPG file.</p>
+        </div>
+      </div>
+      <div class="section-3 p-4 ">
+        <div class="row d-flex  justify-content-between  ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="fullName" class="fw-bold mb-2 ">Full Name</label>
+            <input type="text" id="fullName" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="userName" class="fw-bold mb-2 ">User Name</label>
+            <input type="text" id="userName" class="w-100">
+          </div>
+        </div>
+        <div class="row d-flex justify-content-between   ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="email" class="fw-bold mb-2 ">Email Address</label>
+            <input type="email" id="email" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="password" class="fw-bold mb-2 ">Password</label>
+            <div class="password-contanier">
+            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <div class="modal-footer d-flex w-100 justify-content-center ">
+      <button type="button"
+        class="btn btn-secondary d-flex justify-content-center align-items-center "
+        data-dismiss="modal">Save Changes</button>
+    </div>
+
+  </form>
+</div>
+</div>
+<!-- End Modal -->
+
+              <img src="../../../../../assets/delete.svg" alt>
+            </div>
+          </div>
+          <!-- ngfor -->
+          <div
+            class="row table-row d-flex justify-content-between align-items-center   mt-2">
+            <div class="col-md-2 photo">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3148/4fa8/75a6766693a8c9b9d49b78deb2d62147?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OJccAa-8icThl66qHAhncfVnDXE2afFtU8Y-UQoy0JZcF-KoKLi2BC~~HGNypkdP8WUkizRowLxUu3lFCd-cHOqCkzFVFgZIFkM8Nse3k5AnPND7YmQS7Y55NUDE~nLc6N5vHJ-Bghf7m49keGDGh1j5874oHcUclBjp9All3HK98X0YrbygW2ATa7DSDBXPpjT0sOKbUaEW8IqCQPk3JJYMzxxfgWDbVQj5Vr0ipoj-FQhdvNGsfUmcyI74Y5LT~6dPnBL4lELMfJA2AlJ~CzHXU83E6y8ywpv2yh07okMnfdati-rOpyhuSXCqGeub5F79k-xVlYfblqs-Cu8tTw__"
+                alt>
+            </div>
+            <div class="col-md-2">Islam Ali Saied</div>
+            <div class="col-md-2">Islam_ali15</div>
+            <div class="col-md-2">Islam25@test.com</div>
+            <div class="col-md-2 d-flex icons">
+
+              <a data-bs-toggle="modal"
+                data-bs-target="#Details"><img
+                  src="../../../../../assets/eye.svg" alt></a>
+              <!-- Start Modal Show Details-->
+              <div class="modal fade" id="Details" tabindex="-1" role="dialog"
+                aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <!-- Modal Body -->
+                    <div
+                      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+                      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+                      <div class="section-1 d-flex justify-content-between ">
+                        <div class="title">User Details</div>
+                        <button type="button" class="btn-close"
+                          data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="section-2 mb-2  d-flex ">
+                        <div class="image text-center ">
+                          <img src="../../../../../assets/profile-details.svg"
+                            alt>
+                        </div>
+                        <div class="d-flex align-items-start  gap-2 ">
+                          <img src="../../../../../assets/edit UserDetails.svg"
+                            alt>
+                          <img src="../../../../../assets/delete.svg" alt>
+                        </div>
+                      </div>
+                      <div class="section-3">
+                        <div class="row mb-4">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="fullName" class="fw-bold mb-2 ">Full
+                              Name</label>
+                            <input type="text" id="fullName">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="userName" class="fw-bold mb-2 ">User
+                              Name</label>
+                            <input type="text" id="userName">
+                          </div>
+                        </div>
+                        <div class="row mb-3 ">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="email" class="fw-bold mb-2 ">Email
+                              Address</label>
+                            <input type="email" id="email">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="password" class="fw-bold mb-2 ">Password</label>
+                            <div class="password-contanier">
+                            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- </div> -->
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- End Modal -->
+              <a data-bs-toggle="modal"
+              data-bs-target="#EditUserModal"><img src="../../../../../assets/Edit.svg" alt></a>
+<!-- Start Modal Edit User -->
+<div class="modal fade" id="EditUserModal" tabindex="-1" role="dialog"
+aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+  <form class="modal-content">
+    <!-- Modal Body -->
+    <div
+      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+      <div class="section-1 d-flex justify-content-between w-100">
+        <div class="title">Add User</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div
+        class="section-2 p-2  m-2 mt-3  Add-details   d-flex gap-3 align-items-center  ">
+        <div class="image profile-image">
+          <img src="../../../../../assets/profile-details.svg" alt>
+          <a class="delete-photo">
+            <img  src="../../../../../fluent_delete-20-regular.svg" alt="">
+        </a>
+        </div>
+        <div class="d-flex flex-column justify-content-around    gap-2 ">
+          <label for="image" class="custom-file-upload">
+            <img src="../../../../../assets/gallery-import.svg" alt>
+            <span>Upload Photo</span>
+            <input type="file" name="image" id="image" accept="image/*">
+          </label>
+          <p>At least 256*256 px PNG or JPG file.</p>
+        </div>
+      </div>
+      <div class="section-3 p-4 ">
+        <div class="row d-flex  justify-content-between  ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="fullName" class="fw-bold mb-2 ">Full Name</label>
+            <input type="text" id="fullName" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="userName" class="fw-bold mb-2 ">User Name</label>
+            <input type="text" id="userName" class="w-100">
+          </div>
+        </div>
+        <div class="row d-flex justify-content-between   ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="email" class="fw-bold mb-2 ">Email Address</label>
+            <input type="email" id="email" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="password" class="fw-bold mb-2 ">Password</label>
+            <div class="password-contanier">
+            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <div class="modal-footer d-flex w-100 justify-content-center ">
+      <button type="button"
+        class="btn btn-secondary d-flex justify-content-center align-items-center "
+        data-dismiss="modal">Save Changes</button>
+    </div>
+
+  </form>
+</div>
+</div>
+<!-- End Modal -->
+
+              <img src="../../../../../assets/delete.svg" alt>
+            </div>
+          </div>
+          <!-- ngfor -->
+          <div
+            class="row table-row d-flex justify-content-between align-items-center   mt-2">
+            <div class="col-md-2 photo">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3148/4fa8/75a6766693a8c9b9d49b78deb2d62147?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OJccAa-8icThl66qHAhncfVnDXE2afFtU8Y-UQoy0JZcF-KoKLi2BC~~HGNypkdP8WUkizRowLxUu3lFCd-cHOqCkzFVFgZIFkM8Nse3k5AnPND7YmQS7Y55NUDE~nLc6N5vHJ-Bghf7m49keGDGh1j5874oHcUclBjp9All3HK98X0YrbygW2ATa7DSDBXPpjT0sOKbUaEW8IqCQPk3JJYMzxxfgWDbVQj5Vr0ipoj-FQhdvNGsfUmcyI74Y5LT~6dPnBL4lELMfJA2AlJ~CzHXU83E6y8ywpv2yh07okMnfdati-rOpyhuSXCqGeub5F79k-xVlYfblqs-Cu8tTw__"
+                alt>
+            </div>
+            <div class="col-md-2">Islam Ali Saied</div>
+            <div class="col-md-2">Islam_ali15</div>
+            <div class="col-md-2">Islam25@test.com</div>
+            <div class="col-md-2 d-flex icons">
+
+              <a data-bs-toggle="modal"
+                data-bs-target="#Details"><img
+                  src="../../../../../assets/eye.svg" alt></a>
+              <!-- Start Modal Show Details-->
+              <div class="modal fade" id="Details" tabindex="-1" role="dialog"
+                aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <!-- Modal Body -->
+                    <div
+                      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+                      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+                      <div class="section-1 d-flex justify-content-between ">
+                        <div class="title">User Details</div>
+                        <button type="button" class="btn-close"
+                          data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="section-2 mb-2  d-flex ">
+                        <div class="image text-center ">
+                          <img src="../../../../../assets/profile-details.svg"
+                            alt>
+                        </div>
+                        <div class="d-flex align-items-start  gap-2 ">
+                          <img src="../../../../../assets/edit UserDetails.svg"
+                            alt>
+                          <img src="../../../../../assets/delete.svg" alt>
+                        </div>
+                      </div>
+                      <div class="section-3">
+                        <div class="row mb-4">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="fullName" class="fw-bold mb-2 ">Full
+                              Name</label>
+                            <input type="text" id="fullName">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="userName" class="fw-bold mb-2 ">User
+                              Name</label>
+                            <input type="text" id="userName">
+                          </div>
+                        </div>
+                        <div class="row mb-3 ">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="email" class="fw-bold mb-2 ">Email
+                              Address</label>
+                            <input type="email" id="email">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="password" class="fw-bold mb-2 ">Password</label>
+                            <div class="password-contanier">
+                            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- </div> -->
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- End Modal -->
+              <a data-bs-toggle="modal"
+              data-bs-target="#EditUserModal"><img src="../../../../../assets/Edit.svg" alt></a>
+<!-- Start Modal Edit User -->
+<div class="modal fade" id="EditUserModal" tabindex="-1" role="dialog"
+aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+  <form class="modal-content">
+    <!-- Modal Body -->
+    <div
+      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+      <div class="section-1 d-flex justify-content-between w-100">
+        <div class="title">Add User</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div
+        class="section-2 p-2  m-2 mt-3  Add-details   d-flex gap-3 align-items-center  ">
+        <div class="image profile-image">
+          <img src="../../../../../assets/profile-details.svg" alt>
+          <a class="delete-photo">
+            <img  src="../../../../../fluent_delete-20-regular.svg" alt="">
+        </a>
+        </div>
+        <div class="d-flex flex-column justify-content-around    gap-2 ">
+          <label for="image" class="custom-file-upload">
+            <img src="../../../../../assets/gallery-import.svg" alt>
+            <span>Upload Photo</span>
+            <input type="file" name="image" id="image" accept="image/*">
+          </label>
+          <p>At least 256*256 px PNG or JPG file.</p>
+        </div>
+      </div>
+      <div class="section-3 p-4 ">
+        <div class="row d-flex  justify-content-between  ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="fullName" class="fw-bold mb-2 ">Full Name</label>
+            <input type="text" id="fullName" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="userName" class="fw-bold mb-2 ">User Name</label>
+            <input type="text" id="userName" class="w-100">
+          </div>
+        </div>
+        <div class="row d-flex justify-content-between   ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="email" class="fw-bold mb-2 ">Email Address</label>
+            <input type="email" id="email" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="password" class="fw-bold mb-2 ">Password</label>
+            <div class="password-contanier">
+            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <div class="modal-footer d-flex w-100 justify-content-center ">
+      <button type="button"
+        class="btn btn-secondary d-flex justify-content-center align-items-center "
+        data-dismiss="modal">Save Changes</button>
+    </div>
+
+  </form>
+</div>
+</div>
+<!-- End Modal -->
+
+              <img src="../../../../../assets/delete.svg" alt>
+            </div>
+          </div>
+          <!-- ngfor -->
+          <div
+            class="row table-row d-flex justify-content-between align-items-center   mt-2">
+            <div class="col-md-2 photo">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3148/4fa8/75a6766693a8c9b9d49b78deb2d62147?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OJccAa-8icThl66qHAhncfVnDXE2afFtU8Y-UQoy0JZcF-KoKLi2BC~~HGNypkdP8WUkizRowLxUu3lFCd-cHOqCkzFVFgZIFkM8Nse3k5AnPND7YmQS7Y55NUDE~nLc6N5vHJ-Bghf7m49keGDGh1j5874oHcUclBjp9All3HK98X0YrbygW2ATa7DSDBXPpjT0sOKbUaEW8IqCQPk3JJYMzxxfgWDbVQj5Vr0ipoj-FQhdvNGsfUmcyI74Y5LT~6dPnBL4lELMfJA2AlJ~CzHXU83E6y8ywpv2yh07okMnfdati-rOpyhuSXCqGeub5F79k-xVlYfblqs-Cu8tTw__"
+                alt>
+            </div>
+            <div class="col-md-2">Islam Ali Saied</div>
+            <div class="col-md-2">Islam_ali15</div>
+            <div class="col-md-2">Islam25@test.com</div>
+            <div class="col-md-2 d-flex icons">
+
+              <a data-bs-toggle="modal"
+                data-bs-target="#Details"><img
+                  src="../../../../../assets/eye.svg" alt></a>
+              <!-- Start Modal Show Details-->
+              <div class="modal fade" id="Details" tabindex="-1" role="dialog"
+                aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <!-- Modal Body -->
+                    <div
+                      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+                      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+                      <div class="section-1 d-flex justify-content-between ">
+                        <div class="title">User Details</div>
+                        <button type="button" class="btn-close"
+                          data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="section-2 mb-2  d-flex ">
+                        <div class="image text-center ">
+                          <img src="../../../../../assets/profile-details.svg"
+                            alt>
+                        </div>
+                        <div class="d-flex align-items-start  gap-2 ">
+                          <img src="../../../../../assets/edit UserDetails.svg"
+                            alt>
+                          <img src="../../../../../assets/delete.svg" alt>
+                        </div>
+                      </div>
+                      <div class="section-3">
+                        <div class="row mb-4">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="fullName" class="fw-bold mb-2 ">Full
+                              Name</label>
+                            <input type="text" id="fullName">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="userName" class="fw-bold mb-2 ">User
+                              Name</label>
+                            <input type="text" id="userName">
+                          </div>
+                        </div>
+                        <div class="row mb-3 ">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="email" class="fw-bold mb-2 ">Email
+                              Address</label>
+                            <input type="email" id="email">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="password" class="fw-bold mb-2 ">Password</label>
+                            <div class="password-contanier">
+                            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- </div> -->
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- End Modal -->
+              <a data-bs-toggle="modal"
+              data-bs-target="#EditUserModal"><img src="../../../../../assets/Edit.svg" alt></a>
+<!-- Start Modal Edit User -->
+<div class="modal fade" id="EditUserModal" tabindex="-1" role="dialog"
+aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+  <form class="modal-content">
+    <!-- Modal Body -->
+    <div
+      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+      <div class="section-1 d-flex justify-content-between w-100">
+        <div class="title">Add User</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div
+        class="section-2 p-2  m-2 mt-3  Add-details   d-flex gap-3 align-items-center  ">
+        <div class="image profile-image">
+          <img src="../../../../../assets/profile-details.svg" alt>
+          <a class="delete-photo">
+            <img  src="../../../../../fluent_delete-20-regular.svg" alt="">
+        </a>
+        </div>
+        <div class="d-flex flex-column justify-content-around    gap-2 ">
+          <label for="image" class="custom-file-upload">
+            <img src="../../../../../assets/gallery-import.svg" alt>
+            <span>Upload Photo</span>
+            <input type="file" name="image" id="image" accept="image/*">
+          </label>
+          <p>At least 256*256 px PNG or JPG file.</p>
+        </div>
+      </div>
+      <div class="section-3 p-4 ">
+        <div class="row d-flex  justify-content-between  ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="fullName" class="fw-bold mb-2 ">Full Name</label>
+            <input type="text" id="fullName" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="userName" class="fw-bold mb-2 ">User Name</label>
+            <input type="text" id="userName" class="w-100">
+          </div>
+        </div>
+        <div class="row d-flex justify-content-between   ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="email" class="fw-bold mb-2 ">Email Address</label>
+            <input type="email" id="email" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="password" class="fw-bold mb-2 ">Password</label>
+            <div class="password-contanier">
+            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <div class="modal-footer d-flex w-100 justify-content-center ">
+      <button type="button"
+        class="btn btn-secondary d-flex justify-content-center align-items-center "
+        data-dismiss="modal">Save Changes</button>
+    </div>
+
+  </form>
+</div>
+</div>
+<!-- End Modal -->
+
+              <img src="../../../../../assets/delete.svg" alt>
+            </div>
+          </div>
+          <!-- ngfor -->
+          <div
+            class="row table-row d-flex justify-content-between align-items-center   mt-2">
+            <div class="col-md-2 photo">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3148/4fa8/75a6766693a8c9b9d49b78deb2d62147?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OJccAa-8icThl66qHAhncfVnDXE2afFtU8Y-UQoy0JZcF-KoKLi2BC~~HGNypkdP8WUkizRowLxUu3lFCd-cHOqCkzFVFgZIFkM8Nse3k5AnPND7YmQS7Y55NUDE~nLc6N5vHJ-Bghf7m49keGDGh1j5874oHcUclBjp9All3HK98X0YrbygW2ATa7DSDBXPpjT0sOKbUaEW8IqCQPk3JJYMzxxfgWDbVQj5Vr0ipoj-FQhdvNGsfUmcyI74Y5LT~6dPnBL4lELMfJA2AlJ~CzHXU83E6y8ywpv2yh07okMnfdati-rOpyhuSXCqGeub5F79k-xVlYfblqs-Cu8tTw__"
+                alt>
+            </div>
+            <div class="col-md-2">Islam Ali Saied</div>
+            <div class="col-md-2">Islam_ali15</div>
+            <div class="col-md-2">Islam25@test.com</div>
+            <div class="col-md-2 d-flex icons">
+
+              <a data-bs-toggle="modal"
+                data-bs-target="#Details"><img
+                  src="../../../../../assets/eye.svg" alt></a>
+              <!-- Start Modal Show Details-->
+              <div class="modal fade" id="Details" tabindex="-1" role="dialog"
+                aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <!-- Modal Body -->
+                    <div
+                      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+                      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+                      <div class="section-1 d-flex justify-content-between ">
+                        <div class="title">User Details</div>
+                        <button type="button" class="btn-close"
+                          data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="section-2 mb-2  d-flex ">
+                        <div class="image text-center ">
+                          <img src="../../../../../assets/profile-details.svg"
+                            alt>
+                        </div>
+                        <div class="d-flex align-items-start  gap-2 ">
+                          <img src="../../../../../assets/edit UserDetails.svg"
+                            alt>
+                          <img src="../../../../../assets/delete.svg" alt>
+                        </div>
+                      </div>
+                      <div class="section-3">
+                        <div class="row mb-4">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="fullName" class="fw-bold mb-2 ">Full
+                              Name</label>
+                            <input type="text" id="fullName">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="userName" class="fw-bold mb-2 ">User
+                              Name</label>
+                            <input type="text" id="userName">
+                          </div>
+                        </div>
+                        <div class="row mb-3 ">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="email" class="fw-bold mb-2 ">Email
+                              Address</label>
+                            <input type="email" id="email">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="password" class="fw-bold mb-2 ">Password</label>
+                            <div class="password-contanier">
+                            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- </div> -->
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- End Modal -->
+              <a data-bs-toggle="modal"
+              data-bs-target="#EditUserModal"><img src="../../../../../assets/Edit.svg" alt></a>
+<!-- Start Modal Edit User -->
+<div class="modal fade" id="EditUserModal" tabindex="-1" role="dialog"
+aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+  <form class="modal-content">
+    <!-- Modal Body -->
+    <div
+      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+      <div class="section-1 d-flex justify-content-between w-100">
+        <div class="title">Add User</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div
+        class="section-2 p-2  m-2 mt-3  Add-details   d-flex gap-3 align-items-center  ">
+        <div class="image profile-image">
+          <img src="../../../../../assets/profile-details.svg" alt>
+          <a class="delete-photo">
+            <img  src="../../../../../fluent_delete-20-regular.svg" alt="">
+        </a>
+        </div>
+        <div class="d-flex flex-column justify-content-around    gap-2 ">
+          <label for="image" class="custom-file-upload">
+            <img src="../../../../../assets/gallery-import.svg" alt>
+            <span>Upload Photo</span>
+            <input type="file" name="image" id="image" accept="image/*">
+          </label>
+          <p>At least 256*256 px PNG or JPG file.</p>
+        </div>
+      </div>
+      <div class="section-3 p-4 ">
+        <div class="row d-flex  justify-content-between  ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="fullName" class="fw-bold mb-2 ">Full Name</label>
+            <input type="text" id="fullName" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="userName" class="fw-bold mb-2 ">User Name</label>
+            <input type="text" id="userName" class="w-100">
+          </div>
+        </div>
+        <div class="row d-flex justify-content-between   ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="email" class="fw-bold mb-2 ">Email Address</label>
+            <input type="email" id="email" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="password" class="fw-bold mb-2 ">Password</label>
+            <div class="password-contanier">
+            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <div class="modal-footer d-flex w-100 justify-content-center ">
+      <button type="button"
+        class="btn btn-secondary d-flex justify-content-center align-items-center "
+        data-dismiss="modal">Save Changes</button>
+    </div>
+
+  </form>
+</div>
+</div>
+<!-- End Modal -->
+
+              <img src="../../../../../assets/delete.svg" alt>
+            </div>
+          </div>
+          <!-- ngfor -->
+          <div
+            class="row table-row d-flex justify-content-between align-items-center   mt-2">
+            <div class="col-md-2 photo">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3148/4fa8/75a6766693a8c9b9d49b78deb2d62147?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OJccAa-8icThl66qHAhncfVnDXE2afFtU8Y-UQoy0JZcF-KoKLi2BC~~HGNypkdP8WUkizRowLxUu3lFCd-cHOqCkzFVFgZIFkM8Nse3k5AnPND7YmQS7Y55NUDE~nLc6N5vHJ-Bghf7m49keGDGh1j5874oHcUclBjp9All3HK98X0YrbygW2ATa7DSDBXPpjT0sOKbUaEW8IqCQPk3JJYMzxxfgWDbVQj5Vr0ipoj-FQhdvNGsfUmcyI74Y5LT~6dPnBL4lELMfJA2AlJ~CzHXU83E6y8ywpv2yh07okMnfdati-rOpyhuSXCqGeub5F79k-xVlYfblqs-Cu8tTw__"
+                alt>
+            </div>
+            <div class="col-md-2">Islam Ali Saied</div>
+            <div class="col-md-2">Islam_ali15</div>
+            <div class="col-md-2">Islam25@test.com</div>
+            <div class="col-md-2 d-flex icons">
+
+              <a data-bs-toggle="modal"
+                data-bs-target="#Details"><img
+                  src="../../../../../assets/eye.svg" alt></a>
+              <!-- Start Modal Show Details-->
+              <div class="modal fade" id="Details" tabindex="-1" role="dialog"
+                aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <!-- Modal Body -->
+                    <div
+                      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+                      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+                      <div class="section-1 d-flex justify-content-between ">
+                        <div class="title">User Details</div>
+                        <button type="button" class="btn-close"
+                          data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="section-2 mb-2  d-flex ">
+                        <div class="image text-center ">
+                          <img src="../../../../../assets/profile-details.svg"
+                            alt>
+                        </div>
+                        <div class="d-flex align-items-start  gap-2 ">
+                          <img src="../../../../../assets/edit UserDetails.svg"
+                            alt>
+                          <img src="../../../../../assets/delete.svg" alt>
+                        </div>
+                      </div>
+                      <div class="section-3">
+                        <div class="row mb-4">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="fullName" class="fw-bold mb-2 ">Full
+                              Name</label>
+                            <input type="text" id="fullName">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="userName" class="fw-bold mb-2 ">User
+                              Name</label>
+                            <input type="text" id="userName">
+                          </div>
+                        </div>
+                        <div class="row mb-3 ">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="email" class="fw-bold mb-2 ">Email
+                              Address</label>
+                            <input type="email" id="email">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="password" class="fw-bold mb-2 ">Password</label>
+                            <div class="password-contanier">
+                            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- </div> -->
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- End Modal -->
+              <a data-bs-toggle="modal"
+              data-bs-target="#EditUserModal"><img src="../../../../../assets/Edit.svg" alt></a>
+<!-- Start Modal Edit User -->
+<div class="modal fade" id="EditUserModal" tabindex="-1" role="dialog"
+aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+  <form class="modal-content">
+    <!-- Modal Body -->
+    <div
+      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+      <div class="section-1 d-flex justify-content-between w-100">
+        <div class="title">Add User</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div
+        class="section-2 p-2  m-2 mt-3  Add-details   d-flex gap-3 align-items-center  ">
+        <div class="image profile-image">
+          <img src="../../../../../assets/profile-details.svg" alt>
+          <a class="delete-photo">
+            <img  src="../../../../../fluent_delete-20-regular.svg" alt="">
+        </a>
+        </div>
+        <div class="d-flex flex-column justify-content-around    gap-2 ">
+          <label for="image" class="custom-file-upload">
+            <img src="../../../../../assets/gallery-import.svg" alt>
+            <span>Upload Photo</span>
+            <input type="file" name="image" id="image" accept="image/*">
+          </label>
+          <p>At least 256*256 px PNG or JPG file.</p>
+        </div>
+      </div>
+      <div class="section-3 p-4 ">
+        <div class="row d-flex  justify-content-between  ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="fullName" class="fw-bold mb-2 ">Full Name</label>
+            <input type="text" id="fullName" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="userName" class="fw-bold mb-2 ">User Name</label>
+            <input type="text" id="userName" class="w-100">
+          </div>
+        </div>
+        <div class="row d-flex justify-content-between   ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="email" class="fw-bold mb-2 ">Email Address</label>
+            <input type="email" id="email" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="password" class="fw-bold mb-2 ">Password</label>
+            <div class="password-contanier">
+            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <div class="modal-footer d-flex w-100 justify-content-center ">
+      <button type="button"
+        class="btn btn-secondary d-flex justify-content-center align-items-center "
+        data-dismiss="modal">Save Changes</button>
+    </div>
+
+  </form>
+</div>
+</div>
+<!-- End Modal -->
+
+              <img src="../../../../../assets/delete.svg" alt>
+            </div>
+          </div>
+          <!-- ngfor -->
+          <div
+            class="row table-row d-flex justify-content-between align-items-center   mt-2">
+            <div class="col-md-2 photo">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3148/4fa8/75a6766693a8c9b9d49b78deb2d62147?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OJccAa-8icThl66qHAhncfVnDXE2afFtU8Y-UQoy0JZcF-KoKLi2BC~~HGNypkdP8WUkizRowLxUu3lFCd-cHOqCkzFVFgZIFkM8Nse3k5AnPND7YmQS7Y55NUDE~nLc6N5vHJ-Bghf7m49keGDGh1j5874oHcUclBjp9All3HK98X0YrbygW2ATa7DSDBXPpjT0sOKbUaEW8IqCQPk3JJYMzxxfgWDbVQj5Vr0ipoj-FQhdvNGsfUmcyI74Y5LT~6dPnBL4lELMfJA2AlJ~CzHXU83E6y8ywpv2yh07okMnfdati-rOpyhuSXCqGeub5F79k-xVlYfblqs-Cu8tTw__"
+                alt>
+            </div>
+            <div class="col-md-2">Islam Ali Saied</div>
+            <div class="col-md-2">Islam_ali15</div>
+            <div class="col-md-2">Islam25@test.com</div>
+            <div class="col-md-2 d-flex icons">
+
+              <a data-bs-toggle="modal"
+                data-bs-target="#Details"><img
+                  src="../../../../../assets/eye.svg" alt></a>
+              <!-- Start Modal Show Details-->
+              <div class="modal fade" id="Details" tabindex="-1" role="dialog"
+                aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <!-- Modal Body -->
+                    <div
+                      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+                      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+                      <div class="section-1 d-flex justify-content-between ">
+                        <div class="title">User Details</div>
+                        <button type="button" class="btn-close"
+                          data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="section-2 mb-2  d-flex ">
+                        <div class="image text-center ">
+                          <img src="../../../../../assets/profile-details.svg"
+                            alt>
+                        </div>
+                        <div class="d-flex align-items-start  gap-2 ">
+                          <img src="../../../../../assets/edit UserDetails.svg"
+                            alt>
+                          <img src="../../../../../assets/delete.svg" alt>
+                        </div>
+                      </div>
+                      <div class="section-3">
+                        <div class="row mb-4">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="fullName" class="fw-bold mb-2 ">Full
+                              Name</label>
+                            <input type="text" id="fullName">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="userName" class="fw-bold mb-2 ">User
+                              Name</label>
+                            <input type="text" id="userName">
+                          </div>
+                        </div>
+                        <div class="row mb-3 ">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="email" class="fw-bold mb-2 ">Email
+                              Address</label>
+                            <input type="email" id="email">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="password" class="fw-bold mb-2 ">Password</label>
+                            <div class="password-contanier">
+                            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- </div> -->
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- End Modal -->
+              <a data-bs-toggle="modal"
+              data-bs-target="#EditUserModal"><img src="../../../../../assets/Edit.svg" alt></a>
+<!-- Start Modal Edit User -->
+<div class="modal fade" id="EditUserModal" tabindex="-1" role="dialog"
+aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+  <form class="modal-content">
+    <!-- Modal Body -->
+    <div
+      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+      <div class="section-1 d-flex justify-content-between w-100">
+        <div class="title">Add User</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div
+        class="section-2 p-2  m-2 mt-3  Add-details   d-flex gap-3 align-items-center  ">
+        <div class="image profile-image">
+          <img src="../../../../../assets/profile-details.svg" alt>
+          <a class="delete-photo">
+            <img  src="../../../../../fluent_delete-20-regular.svg" alt="">
+        </a>
+        </div>
+        <div class="d-flex flex-column justify-content-around    gap-2 ">
+          <label for="image" class="custom-file-upload">
+            <img src="../../../../../assets/gallery-import.svg" alt>
+            <span>Upload Photo</span>
+            <input type="file" name="image" id="image" accept="image/*">
+          </label>
+          <p>At least 256*256 px PNG or JPG file.</p>
+        </div>
+      </div>
+      <div class="section-3 p-4 ">
+        <div class="row d-flex  justify-content-between  ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="fullName" class="fw-bold mb-2 ">Full Name</label>
+            <input type="text" id="fullName" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="userName" class="fw-bold mb-2 ">User Name</label>
+            <input type="text" id="userName" class="w-100">
+          </div>
+        </div>
+        <div class="row d-flex justify-content-between   ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="email" class="fw-bold mb-2 ">Email Address</label>
+            <input type="email" id="email" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="password" class="fw-bold mb-2 ">Password</label>
+            <div class="password-contanier">
+            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <div class="modal-footer d-flex w-100 justify-content-center ">
+      <button type="button"
+        class="btn btn-secondary d-flex justify-content-center align-items-center "
+        data-dismiss="modal">Save Changes</button>
+    </div>
+
+  </form>
+</div>
+</div>
+<!-- End Modal -->
+
+              <img src="../../../../../assets/delete.svg" alt>
+            </div>
+          </div>
+          <!-- ngfor -->
+          <div
+            class="row table-row d-flex justify-content-between align-items-center   mt-2">
+            <div class="col-md-2 photo">
+              <img
+                src="https://s3-alpha-sig.figma.com/img/3148/4fa8/75a6766693a8c9b9d49b78deb2d62147?Expires=1711929600&Key-Pair-Id=APKAQ4GOSFWCVNEHN3O4&Signature=OJccAa-8icThl66qHAhncfVnDXE2afFtU8Y-UQoy0JZcF-KoKLi2BC~~HGNypkdP8WUkizRowLxUu3lFCd-cHOqCkzFVFgZIFkM8Nse3k5AnPND7YmQS7Y55NUDE~nLc6N5vHJ-Bghf7m49keGDGh1j5874oHcUclBjp9All3HK98X0YrbygW2ATa7DSDBXPpjT0sOKbUaEW8IqCQPk3JJYMzxxfgWDbVQj5Vr0ipoj-FQhdvNGsfUmcyI74Y5LT~6dPnBL4lELMfJA2AlJ~CzHXU83E6y8ywpv2yh07okMnfdati-rOpyhuSXCqGeub5F79k-xVlYfblqs-Cu8tTw__"
+                alt>
+            </div>
+            <div class="col-md-2">Islam Ali Saied</div>
+            <div class="col-md-2">Islam_ali15</div>
+            <div class="col-md-2">Islam25@test.com</div>
+            <div class="col-md-2 d-flex icons">
+
+              <a data-bs-toggle="modal"
+                data-bs-target="#Details"><img
+                  src="../../../../../assets/eye.svg" alt></a>
+              <!-- Start Modal Show Details-->
+              <div class="modal fade" id="Details" tabindex="-1" role="dialog"
+                aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+                <div class="modal-dialog modal-lg" role="document">
+                  <div class="modal-content">
+                    <!-- Modal Body -->
+                    <div
+                      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+                      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+                      <div class="section-1 d-flex justify-content-between ">
+                        <div class="title">User Details</div>
+                        <button type="button" class="btn-close"
+                          data-bs-dismiss="modal" aria-label="Close"></button>
+                      </div>
+                      <div class="section-2 mb-2  d-flex ">
+                        <div class="image text-center ">
+                          <img src="../../../../../assets/profile-details.svg"
+                            alt>
+                        </div>
+                        <div class="d-flex align-items-start  gap-2 ">
+                          <img src="../../../../../assets/edit UserDetails.svg"
+                            alt>
+                          <img src="../../../../../assets/delete.svg" alt>
+                        </div>
+                      </div>
+                      <div class="section-3">
+                        <div class="row mb-4">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="fullName" class="fw-bold mb-2 ">Full
+                              Name</label>
+                            <input type="text" id="fullName">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="userName" class="fw-bold mb-2 ">User
+                              Name</label>
+                            <input type="text" id="userName">
+                          </div>
+                        </div>
+                        <div class="row mb-3 ">
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="email" class="fw-bold mb-2 ">Email
+                              Address</label>
+                            <input type="email" id="email">
+                          </div>
+                          <div class="col-md-4  d-flex flex-column gap-1">
+                            <label for="password" class="fw-bold mb-2 ">Password</label>
+                            <div class="password-contanier">
+                            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+                          </div>
+                          </div>
+                        </div>
+                      </div>
+                      <!-- </div> -->
+                    </div>
+
+                  </div>
+                </div>
+              </div>
+              <!-- End Modal -->
+              <a data-bs-toggle="modal"
+              data-bs-target="#EditUserModal"><img src="../../../../../assets/Edit.svg" alt></a>
+<!-- Start Modal Edit User -->
+<div class="modal fade" id="EditUserModal" tabindex="-1" role="dialog"
+aria-labelledby="userDetailsModalLabel" aria-hidden="true">
+<div class="modal-dialog modal-lg" role="document">
+  <form class="modal-content">
+    <!-- Modal Body -->
+    <div
+      class="modal-body d-flex justify-content-center flex-column box  h-100  ">
+      <!-- <div class="box d-flex justify-content-center flex-column">  -->
+      <div class="section-1 d-flex justify-content-between w-100">
+        <div class="title">Add User</div>
+        <button type="button" class="btn-close" data-bs-dismiss="modal"
+          aria-label="Close"></button>
+      </div>
+      <div
+        class="section-2 p-2  m-2 mt-3  Add-details   d-flex gap-3 align-items-center  ">
+        <div class="image profile-image">
+          <img src="../../../../../assets/profile-details.svg" alt>
+          <a class="delete-photo">
+            <img  src="../../../../../fluent_delete-20-regular.svg" alt="">
+        </a>
+        </div>
+        <div class="d-flex flex-column justify-content-around    gap-2 ">
+          <label for="image" class="custom-file-upload">
+            <img src="../../../../../assets/gallery-import.svg" alt>
+            <span>Upload Photo</span>
+            <input type="file" name="image" id="image" accept="image/*">
+          </label>
+          <p>At least 256*256 px PNG or JPG file.</p>
+        </div>
+      </div>
+      <div class="section-3 p-4 ">
+        <div class="row d-flex  justify-content-between  ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="fullName" class="fw-bold mb-2 ">Full Name</label>
+            <input type="text" id="fullName" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="userName" class="fw-bold mb-2 ">User Name</label>
+            <input type="text" id="userName" class="w-100">
+          </div>
+        </div>
+        <div class="row d-flex justify-content-between   ">
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="email" class="fw-bold mb-2 ">Email Address</label>
+            <input type="email" id="email" class="w-100">
+          </div>
+          <div class="col-md-4  d-flex flex-column gap-1">
+            <label for="password" class="fw-bold mb-2 ">Password</label>
+            <div class="password-contanier">
+            <app-password id= "password " (valueChange)="handlePasswordChange($event)"></app-password>
+          </div>
+          </div>
+        </div>
+      </div>
+      <!-- </div> -->
+    </div>
+    <div class="modal-footer d-flex w-100 justify-content-center ">
+      <button type="button"
+        class="btn btn-secondary d-flex justify-content-center align-items-center "
+        data-dismiss="modal">Save Changes</button>
+    </div>
+
+  </form>
+</div>
+</div>
+<!-- End Modal -->
+
+              <img src="../../../../../assets/delete.svg" alt>
+            </div>
+          </div>
+          <div class="d-flex mt-3  justify-content-between align-items-center ">
+            <div class="num-rows d-flex gap-2 align-items-center  ">
+              <p>Row Per Page</p>
+              <app-dropdownlist  [options]="dropdownOptions"></app-dropdownlist>
+            </div>
+            <div class="paginator d-flex justify-content-between  align-items-center  ">
+              <p >1 of 7</p>
+              <div class="arrows d-flex ">
+              <a class="arrow-left d-flex justify-content-center  align-items-center ">
+                <img src="../../../../../assets/Vector.svg" alt="">
+              </a>
+              <a class="arrow-right d-flex justify-content-center  align-items-center">
+                <img src="../../../../../assets/Vector.svg" alt="">
+              </a>
+            </div>
+            </div>
+        </div>
+        </div>
+    </section>
+  </div>
+</div>

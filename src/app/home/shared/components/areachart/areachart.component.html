@@ -1,0 +1,18 @@
+<div class="d-flex justify-content-end m-2">
+  <select  [(ngModel)]="selectedYear" (change)="onYearChange()">
+    <option *ngFor="let year of years" [value]="year">{{ year }}</option>
+  </select>
+</div>
+<div id="chart">
+  <apx-chart
+    [series]="chartOptions.series"
+    [chart]="chartOptions.chart"
+    [xaxis]="chartOptions.xaxis"
+    [stroke]="chartOptions.stroke"
+    [dataLabels]="chartOptions.dataLabels"
+    [yaxis]="chartOptions.yaxis"
+    [labels]="chartOptions.labels"
+    [legend]="chartOptions.legend"
+    [title]="chartOptions.title"
+  ></apx-chart>
+</div>

@@ -1,0 +1,39 @@
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cairo:wght@200..1000&family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+:host{
+  display: block;
+  background: rgba(239, 243, 248, 1);
+  font-family: 'Poppins', sans-serif;
+  font-weight: 600;
+  width: 264px;
+}
+ nav{
+  background-color: rgba(255, 255, 255, 1);
+  width: 264px;
+  height: calc(100% - 30px);
+  // height: 982px;
+  border-radius: 16px;
+  // height: 100%;
+}
+.tap{
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  height: 44px;
+  width: 232px;
+  padding: 8px 24px 8px 24px;
+  border-radius: 20px;
+  font-size: 16px;
+  font-weight: 600;
+  gap: 8px;
+}
+ .tap.active{
+  background-color: rgba(239, 180, 56, 1);
+  color: white;
+  /* gap: 8px; */
+}
+ .tap img{
+  height: 20px;
+  width: 20px;
+
+}

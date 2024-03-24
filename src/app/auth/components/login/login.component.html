@@ -1,0 +1,21 @@
+<div class="container h-100 d-flex align-items-center justify-content-center flex-column ">
+  <div class="w-100 d-flex justify-content-center flex-column">
+  <div class="title-login w-100  d-flex mb-5 justify-content-center  ">
+          <p>Miso</p>
+          <p class="second-p">Whey</p>
+      </div>
+      <form [formGroup]="loginForm" class="form-login d-flex flex-column justify-content-center gap-2">
+          <div class="email-container d-flex flex-column gap-1">
+              <label for="email" class="fw-bold">Email Address</label>
+              <input formControlName="email" type="email" name="email" class="w-100" placeholder="hallo@gmail.com">
+          </div>
+          <div class="password-container d-flex flex-column gap-1 ">
+              <label for="password" class="fw-bold">Password</label>
+              <!-- <input formControlName="password" type="password" name="password" placeholder="Your Password"> -->
+              <app-password (valueChange)="handlePasswordChange($event)"></app-password>
+          </div>
+          <input type="submit" class="align-self-center mt-5" (click)="login()" value="Sign in">
+
+      </form>
+  </div>
+</div>
